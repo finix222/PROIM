@@ -15,55 +15,61 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./iimages/logo.jpg"
+      href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+    <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
     <title>PROIMAGINARI landing page</title>
   </head>
   <body>
-    <header class="primary-header">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="" class="logo-con">
-           <img src="./images/logo.jpg" alt="proimaginary logo" width="35px" height="35px">
-           <span>PROIMAGINARI</span>
-          </a>
-          <button
-            class="mobile-nav-toggle"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-          >
-            <img
-              class="icon-hamburger"
-              src="./images/icon-hamburger.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <img
-              class="icon-close"
-              src="./images/icon-close.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <span class="visually-hidden">menu</span>
-          </button>
-          <nav class="primary-navigation" id="primary-navigation">
-            <ul aria-label="primary" role="list" class="nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Product</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Communuity</a></li>
-            </ul>
-          </nav>
-         
+    <header class="primary-header primary-header_color">
+      <div class="primary-header_color">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="" class="logo-name">
+              <img src="./images/logo-removebg-preview.png" alt="proimaginary logo" width="35px" height="35px">
+              <span>PROIMAGINARI</span>
+            </a>
+            <button
+              class="mobile-nav-toggle"
+              aria-controls="primary-navigation"
+              aria-expanded="false"
+            >
+              <img
+                class="icon-hamburger"
+                src="./images/icon-hamburger.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="icon-close"
+                src="./images/icon-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="visually-hidden">menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation">
+              <ul aria-label="primary" role="list" class="nav-list">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Communuity</a></li>
+              </ul>
+            </nav>
+            <!-- <button class="button | display-sm-none display-md-inline-flex">
+              Get Started
+            </button> -->
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="padding-block-900">
+      <section class="padding-block-900" id="Home">
         <div class="container">
           <div class="even-columns">
-            <div class="flow">
+            <div class="flow text-center-sm-only">
               <h1 class="fs-primary-heading fw-bold">
                 Bring everyone together to build better products
               </h1>
@@ -75,10 +81,11 @@
             </div>
             <div>
               <img
-                src="./images/work1.jpg"
-                alt="illustration"
-                srcset=""
-              />
+              src="./images/mwork1.jpg"
+              alt="illustration"
+              srcset=""
+              class="work-img"
+            />
             </div>
           </div>
         </div>
@@ -86,7 +93,7 @@
       <section class="padding-block-900">
         <div class="container">
           <div class="even-columns">
-            <div class="flow">
+            <div class="flow text-center-sm-only">
               <h2 class="fs-secondary-heading fw-bold">
                 What's differnet about PROIMAGINARI
               </h2>
@@ -100,16 +107,20 @@
               <ul class="numbered-items | flow" role="list">
                 <li>
                   <div class="flow" style="--flow-spacer: 1em">
-                    <h3 class="fs-600 fw-bold">Building the best affordable website for your company</h3>
-                    <p data-width="wide">
+                    <h3 class="numbered-items__title | fs-600 fw-bold">
+                      Building the best affordable website for your company
+                    </h3>
+                    <p class="numbered-items__body" data-width="wide">
                       At PROIMAGINARI we deliver the best website for your company with help from our development team which gives the best solution to challanges you may encouter in your company. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta?
                     </p>
                   </div>
                 </li>
                 <li>
                   <div class="flow" style="--flow-spacer: 1em">
-                    <h3 class="fs-600 fw-bold">Graphic designer</h3>
-                    <p data-width="wide">
+                    <h3 class="numbered-items__title | fs-600 fw-bold">
+                      Graphic designer
+                    </h3>
+                    <p class="numbered-items__body" data-width="wide">
                       Our graphics designer gives you the best way to communicate with designs which include pictures, logo, e.t.c 
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque cupiditate voluptatem, necessitatibus vel itaque!
                     </p>
@@ -117,10 +128,10 @@
                 </li>
                 <li>
                   <div class="flow" style="--flow-spacer: 1.5em">
-                    <h3 class="fs-600 fw-bold">
-                     Our trainer, Well find out
+                    <h3 class="numbered-items__title | fs-600 fw-bold">
+                      Our trainer, Well find out
                     </h3>
-                    <p data-width="wide">
+                    <p class="numbered-items__body" data-width="wide">
                       Stop jumping from one service to another to communicate,
                       store files, track tasks and share documents. PROIMAGINARI
                       offers an all-in-one team productivity solution.
@@ -133,10 +144,18 @@
         </div>
       </section>
 
-      <section class="carousel | padding-block-700">
-        <h2 class="fs-secondary-heading fw-bold">Our Team</h2>
+      <section class="carousel | padding-block-700 text-center">
+        <h2 class="fs-secondary-heading fw-bold">our work</h2>
+        <!-- <h3>Here at PROIMAGINARI, meet our team</h3> -->
         <!-- carousel section -->
-        <h3>Here at PROIMAGINARI, meet our team</h3>
+        <div class="card-section">
+          <div class="card-items"><img src="./images/work1.jpeg" alt="" srcset=""></div>
+          <div class="card-items"><img src="./images/work2.jpeg" alt="" srcset=""></div>
+          <div class="card-items"><img src="./images/work3.jpeg" alt="" srcset=""></div>
+          <div class="card-items"><img src="./images/work4.jpeg" alt="" srcset=""></div>
+          <div class="card-items"><img src="./images/work5.jpeg" alt="" srcset=""></div>
+          <div class="card-items"><img src="./images/work6.jpeg" alt="" srcset=""></div>
+        </div>
         <!-- <button class="button">Get Started</button> -->
       </section>
       <!-- simpplify learning section -->
@@ -156,10 +175,12 @@
       </section>
     </main>
     <!-- footer  -->
-    <footer class="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100">
+    <footer
+      class="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100"
+    >
       <div class="container">
-        <div class="primary-footer-wrapper ">
-          <div>
+        <div class="primary-footer-wrapper">
+          <div class="primary-footer-logo-social">
             <a href="" aria-label="home">
               <svg class="logo" width="146" height="24">
                 <use xlink:href="./images/logo.svg#logo"></use>
@@ -213,7 +234,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="primary-footer-nav">
             <nav class="footer-nav">
               <ul
                 data-spacing="tight"
@@ -223,18 +244,21 @@
                 class="footer-nav flow"
               >
                 <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
                 <li><a href="#">Community</a></li>
+                <li><a href="#">Privacy Policy</a></li>
               </ul>
             </nav>
           </div>
-          <div>
+          <div class="primary-footer-form">
             <form action="">
               <input type="email" />
-              <button class="button">Go</button>
-              <p>Copyright &copy; 2022. All Right Reserved</p>
+              <button class="button" data-shadow="none">Go</button>
             </form>
+            <p>Copyright &copy; 2022. All Right Reserved</p>
           </div>
         </div>
       </div>
