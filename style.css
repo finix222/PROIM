@@ -53,9 +53,9 @@
     --fs-nav: var(--fs-300);
   }
 }
-div>*{
+/* div>*{
   border: 1px solid red;
-}
+} */
 *,
 *::before,
 *::after {
