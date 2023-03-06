@@ -53,6 +53,9 @@
     --fs-nav: var(--fs-300);
   }
 }
+div>*{
+  border: 1px solid red;
+}
 *,
 *::before,
 *::after {
@@ -463,14 +466,21 @@ input:where([type="email"], [type="email"]){
     /* gap: 2rem; */
   
   }
+  .card-items > *{
+    height: 200px;
+    width: 200px;
+    /* aspect-ratio: 1; */
+  }
 }
 .card-items > *{
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   /* aspect-ratio: 1; */
 }
-
-
+/* carosel */
+.carousel-margin{
+  margin: var(--size-500) 0px;
+}
 /* cta */
 .cta {
   position: relative;
